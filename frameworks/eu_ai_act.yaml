@@ -1,0 +1,115 @@
+# frameworks/eu_ai_act.yaml
+#
+# Source: Regulation (EU) 2024/1689 (the "EU AI Act"). Official legal text,
+# publicly available at https://eur-lex.europa.eu/eli/reg/2024/1689/oj
+#
+# As of August 2, 2026, the majority of the Act's rules apply, including
+# high-risk AI system requirements under Annex III and the Article 50
+# transparency rules. An "AI Omnibus" reform proposal may still adjust some
+# high-risk deadlines — check https://ai-act-service-desk.ec.europa.eu for
+# the current state before relying on these dates.
+#
+# Summaries below are original paraphrases written for this project, not
+# reproductions of the legal text. Verify article numbers against the
+# official text before relying on them.
+
+framework:
+  id: eu_ai_act
+  name: "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)"
+  jurisdiction: "European Union (binding law)"
+  source_url: "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+
+obligations:
+  - id: euaia-art6-annex3
+    citation: "Article 6 / Annex III"
+    title: "High-risk classification"
+    summary: >
+      AI systems used in specified high-stakes contexts (e.g., employment,
+      credit scoring, law enforcement, education) are classified as
+      high-risk and subject to the Act's most extensive obligations.
+    concepts: [risk_assessment, governance_accountability]
+
+  - id: euaia-art9
+    citation: "Article 9"
+    title: "Risk management system"
+    summary: >
+      Providers of high-risk AI systems must establish, document, and
+      maintain a continuous risk management process across the system's
+      lifecycle.
+    concepts: [risk_assessment, governance_accountability, documentation_recordkeeping]
+
+  - id: euaia-art10
+    citation: "Article 10"
+    title: "Data and data governance"
+    summary: >
+      Training, validation, and testing datasets for high-risk systems must
+      meet quality criteria and be examined for possible biases.
+    concepts: [data_quality_governance, bias_fairness]
+
+  - id: euaia-art11-12
+    citation: "Articles 11-12"
+    title: "Technical documentation and record-keeping"
+    summary: >
+      Providers must maintain technical documentation and enable automatic
+      logging of events over the system's operation to ensure traceability.
+    concepts: [documentation_recordkeeping]
+
+  - id: euaia-art13
+    citation: "Article 13"
+    title: "Transparency and provision of information to deployers"
+    summary: >
+      High-risk systems must be designed so their operation is sufficiently
+      transparent, with instructions enabling deployers to interpret outputs
+      and use the system appropriately.
+    concepts: [transparency_explainability, documentation_recordkeeping]
+
+  - id: euaia-art14
+    citation: "Article 14"
+    title: "Human oversight"
+    summary: >
+      High-risk systems must be designed to allow effective human oversight,
+      including the ability for a human to intervene in or halt operation.
+    concepts: [human_oversight]
+
+  - id: euaia-art15
+    citation: "Article 15"
+    title: "Accuracy, robustness, and cybersecurity"
+    summary: >
+      High-risk systems must achieve appropriate levels of accuracy and be
+      resilient to errors, faults, and attempts at manipulation.
+    concepts: [model_validation_testing, monitoring_drift]
+
+  - id: euaia-art26
+    citation: "Article 26"
+    title: "Obligations of deployers of high-risk AI systems"
+    summary: >
+      Deployers must use systems per instructions, monitor operation, and
+      keep logs, extending obligations beyond the original provider.
+    concepts: [monitoring_drift, vendor_third_party_risk, documentation_recordkeeping]
+
+  - id: euaia-art50
+    citation: "Article 50"
+    title: "Transparency obligations for certain AI systems"
+    summary: >
+      Providers and deployers must disclose when individuals are interacting
+      with an AI system (e.g., chatbots) or viewing AI-generated content.
+    concepts: [transparency_explainability]
+
+  - id: euaia-art72
+    citation: "Article 72"
+    title: "Post-market monitoring"
+    summary: >
+      Providers must implement a system to actively collect and review
+      performance data from a deployed high-risk system, with a written
+      plan describing data sources and how findings feed back into risk
+      management.
+    concepts: [monitoring_drift, incident_response]
+
+  - id: euaia-art73
+    citation: "Article 73"
+    title: "Reporting of serious incidents"
+    summary: >
+      Providers must report serious incidents involving a high-risk system
+      to the relevant market surveillance authority within defined
+      timeframes.
+    concepts: [incident_response]

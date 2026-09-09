@@ -1,0 +1,156 @@
+# frameworks/sr_26_2.yaml
+#
+# Source: SR 26-2, "Revised Guidance on Model Risk Management" (April 17,
+# 2026), issued jointly by the Federal Reserve, OCC, and FDIC. Public
+# supervisory guidance. Free to download at
+# https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
+#
+# SR 26-2 explicitly supersedes and replaces SR 11-7 (2011) and SR 21-8
+# (2021). It is expected to be most relevant to banking organizations with
+# over $30 billion in total assets; smaller institutions are generally
+# excluded unless they carry outsized model risk. Per the guidance's own
+# footnote 3: generative AI and agentic AI models are explicitly OUT OF
+# SCOPE ("novel and rapidly evolving"); the guidance's principles apply to
+# traditional statistical/quantitative models and non-generative,
+# non-agentic AI models. That scope limitation is itself a useful data
+# point for an AI governance crosswalk — it marks where this framework's
+# authority ends and newer frameworks (NIST AI RMF, EU AI Act) pick up.
+#
+# Section structure, per the guidance's own headers: Section III overviews
+# model risk and materiality; Section IV covers Model Development and
+# Model Use; Section V covers Model Validation and Monitoring (Conceptual
+# Soundness, Outcomes Analysis, Ongoing Model Monitoring); Section VI
+# covers Governance and Controls (Roles & Responsibilities, Model
+# Inventory, Documentation); Section VII covers Vendor and Other
+# Third-Party Products as its own dedicated section.
+#
+# Summaries below are original paraphrases written for this project, not
+# reproductions of the guidance text.
+
+framework:
+  id: sr_26_2
+  name: "2026 Interagency Model Risk Management Guidance (SR 26-2 / OCC Bulletin 2026-13 / FDIC FIL-15-2026)"
+  jurisdiction: "United States (federal banking supervision; primarily institutions with >$30B total assets)"
+  source_url: "https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm"
+
+obligations:
+  - id: sr262-materiality
+    citation: "SR 26-2, Section III"
+    title: "Risk-based, materiality-driven scoping"
+    summary: >
+      Model risk management rigor is scaled to a model's materiality —
+      its exposure (significance to business decisions) and purpose —
+      rather than applied uniformly, allowing lower-risk models a lighter
+      level of oversight.
+    concepts: [risk_assessment]
+
+  - id: sr262-effective-challenge
+    citation: "SR 26-2, Section III"
+    title: "Effective challenge"
+    summary: >
+      Model risk is meaningfully reduced through critical, objective
+      review by staff with the expertise, independence, and standing to
+      effect changes, applied throughout the model lifecycle from
+      development to ongoing monitoring.
+    concepts: [governance_accountability, model_validation_testing]
+
+  - id: sr262-development
+    citation: "SR 26-2, Section IV"
+    title: "Model development"
+    summary: >
+      Development begins with a clear statement of purpose and aligns
+      methodology, data, and testing decisions to intended use; input
+      from model users during development strengthens design quality.
+    concepts: [model_validation_testing, documentation_recordkeeping]
+
+  - id: sr262-testing-data
+    citation: "SR 26-2, Section IV"
+    title: "Model testing and data quality"
+    summary: >
+      Testing evaluates whether a model performs as intended, including
+      critical assessment of data quality, relevance, and inputs, with
+      rigor scaled to the model's complexity and materiality.
+    concepts: [data_quality_governance, model_validation_testing]
+
+  - id: sr262-model-use
+    citation: "SR 26-2, Section IV"
+    title: "Model use and use limitations"
+    summary: >
+      Using a model beyond its originally intended purpose introduces
+      additional risk; extending use calls for added analysis of the new
+      application and review of existing controls before proceeding.
+    concepts: [change_management]
+
+  - id: sr262-conceptual-soundness
+    citation: "SR 26-2, Section V"
+    title: "Conceptual soundness"
+    summary: >
+      Validation assesses and documents a model's design, assumptions,
+      qualitative judgments, and data selection, using interpretability
+      measures or benchmarking against alternatives where useful.
+    concepts: [model_validation_testing]
+
+  - id: sr262-outcomes-analysis
+    citation: "SR 26-2, Section V"
+    title: "Outcomes analysis"
+    summary: >
+      Model outputs are compared to real-world outcomes — via
+      back-testing, outlier analysis, or similar methods — to identify
+      material errors or persistent deviations warranting adjustment.
+    concepts: [model_validation_testing, monitoring_drift]
+
+  - id: sr262-ongoing-monitoring
+    citation: "SR 26-2, Section V"
+    title: "Ongoing model monitoring"
+    summary: >
+      Models are monitored for continued performance as products,
+      exposures, or market conditions change, with a monitoring plan and
+      defined procedures for responding to detected deterioration.
+    concepts: [monitoring_drift, change_management]
+
+  - id: sr262-governance-controls
+    citation: "SR 26-2, Section VI"
+    title: "Governance, policies, and controls"
+    summary: >
+      Policies define risk management expectations and a framework for
+      assessing model risk magnitude; procedures implement those policies
+      through a defined monitoring and control process.
+    concepts: [governance_accountability]
+
+  - id: sr262-roles
+    citation: "SR 26-2, Section VI"
+    title: "Roles, responsibilities, and independence"
+    summary: >
+      Accountability is clearly assigned across development, validation,
+      and monitoring roles, with attention to conflicts of interest and
+      appropriate independence for functions like internal audit.
+    concepts: [governance_accountability]
+
+  - id: sr262-inventory
+    citation: "SR 26-2, Section VI"
+    title: "Model inventory"
+    summary: >
+      A comprehensive record of models under development or in use is
+      maintained with sufficient detail to understand risk at both the
+      individual model and aggregate portfolio level.
+    concepts: [documentation_recordkeeping, governance_accountability]
+
+  - id: sr262-documentation
+    citation: "SR 26-2, Section VI"
+    title: "Documentation"
+    summary: >
+      Adequate documentation supports continuity of operations, tracks
+      findings, responses, and exceptions, and supports effective
+      remediation of identified model issues.
+    concepts: [documentation_recordkeeping]
+
+  - id: sr262-vendor
+    citation: "SR 26-2, Section VII"
+    title: "Vendor and other third-party products"
+    summary: >
+      Vendor and third-party models remain subject to the same model risk
+      management principles as internally developed models — including
+      understanding conceptual soundness, ongoing monitoring, and outcomes
+      analysis — even with limited access to proprietary methodology, and
+      any customizations made to fit the model are documented and justified.
+    concepts: [vendor_third_party_risk, model_validation_testing]

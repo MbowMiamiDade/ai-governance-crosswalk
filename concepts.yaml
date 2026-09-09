@@ -1,0 +1,81 @@
+# concepts.yaml
+#
+# This is the shared taxonomy that makes this a *crosswalk* rather than four
+# separate summaries. Every obligation in every framework file under
+# frameworks/ is tagged with one or more of these concept IDs.
+#
+# Keep concept IDs short, snake_case, and stable — other files reference them.
+
+concepts:
+  - id: governance_accountability
+    name: "Governance & Accountability"
+    description: >
+      Clear ownership, roles, responsibilities, and organizational structures
+      for managing AI risk (who is accountable for a model, and to whom).
+
+  - id: risk_assessment
+    name: "Risk Assessment & Classification"
+    description: >
+      Identifying, tiering, and classifying AI systems by risk level, and
+      matching the rigor of controls to that risk level.
+
+  - id: data_quality_governance
+    name: "Data Quality & Data Governance"
+    description: >
+      Requirements around the quality, provenance, representativeness, and
+      documentation of data used to train, validate, or operate an AI system.
+
+  - id: human_oversight
+    name: "Human Oversight"
+    description: >
+      Requirements that a human can meaningfully understand, intervene in,
+      override, or stop an AI system's outputs or actions.
+
+  - id: transparency_explainability
+    name: "Transparency & Explainability"
+    description: >
+      Obligations to disclose that AI is being used, and to make a system's
+      logic, capabilities, and limitations understandable to relevant
+      stakeholders (users, regulators, affected individuals).
+
+  - id: model_validation_testing
+    name: "Model Validation & Testing"
+    description: >
+      Independent review, conceptual soundness checks, performance testing,
+      and pre-deployment validation of a model before and during use.
+
+  - id: monitoring_drift
+    name: "Ongoing Monitoring & Drift"
+    description: >
+      Post-deployment monitoring of a model's performance, stability, and
+      continued fitness for purpose over time.
+
+  - id: vendor_third_party_risk
+    name: "Vendor & Third-Party Risk"
+    description: >
+      Risk management obligations that apply when AI systems, models, or
+      components are supplied, hosted, or operated by a third party.
+
+  - id: change_management
+    name: "Change Management"
+    description: >
+      Controls over how models and AI systems are modified, versioned,
+      approved, and re-validated after a change.
+
+  - id: incident_response
+    name: "Incident Response & Post-Market Monitoring"
+    description: >
+      Processes for detecting, reporting, and remediating AI system failures,
+      harms, or serious incidents after deployment.
+
+  - id: documentation_recordkeeping
+    name: "Documentation & Recordkeeping"
+    description: >
+      Requirements to produce and retain technical documentation, records,
+      and audit trails sufficient to demonstrate compliance.
+
+  - id: bias_fairness
+    name: "Bias & Fairness"
+    description: >
+      Requirements to test for, mitigate, and monitor discriminatory or
+      inequitable outcomes produced by an AI system.

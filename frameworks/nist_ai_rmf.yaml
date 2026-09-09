@@ -1,0 +1,134 @@
+# frameworks/nist_ai_rmf.yaml
+#
+# Source: NIST AI Risk Management Framework (AI RMF 1.0), NIST.AI.100-1,
+# released January 26, 2023. Public domain (U.S. government work) — free to
+# download at https://www.nist.gov/itl/ai-risk-management-framework
+#
+# The AI RMF is organized around four functions: Govern, Map, Measure, Manage.
+# Summaries below are original paraphrases of publicly available subcategory
+# themes, written for this project — not verbatim text from the standard.
+# Verify citation numbers against the source PDF before relying on them.
+
+framework:
+  id: nist_ai_rmf
+  name: "NIST AI Risk Management Framework (AI RMF 1.0)"
+  jurisdiction: "United States (voluntary)"
+  source_url: "https://www.nist.gov/itl/ai-risk-management-framework"
+
+obligations:
+  - id: nist-govern-1.1
+    citation: "GOVERN 1.1"
+    title: "Legal and regulatory requirements are understood and managed"
+    summary: >
+      The organization identifies and tracks the legal and regulatory
+      requirements that apply to its AI systems, and manages compliance
+      with them as part of standard governance.
+    concepts: [governance_accountability, documentation_recordkeeping]
+
+  - id: nist-govern-1.5
+    citation: "GOVERN 1.5"
+    title: "Ongoing monitoring and periodic review of risk management"
+    summary: >
+      Risk management processes and their outcomes are established and
+      reviewed on a regular cadence, with clear organizational accountability
+      for keeping them current.
+    concepts: [governance_accountability, monitoring_drift]
+
+  - id: nist-govern-6.1
+    citation: "GOVERN 6.1"
+    title: "Third-party risks are identified and managed"
+    summary: >
+      Policies and procedures address risks arising from third-party
+      software, data, and models, including intellectual property and
+      contractual considerations.
+    concepts: [vendor_third_party_risk, governance_accountability]
+
+  - id: nist-map-1.1
+    citation: "MAP 1.1"
+    title: "Context of use is established and documented"
+    summary: >
+      The intended purpose, deployment context, and reasonably foreseeable
+      uses (and misuses) of the AI system are documented before deployment.
+    concepts: [risk_assessment, documentation_recordkeeping]
+
+  - id: nist-map-2.3
+    citation: "MAP 2.3"
+    title: "Scientific integrity and TEVV considerations are identified"
+    summary: >
+      Test, evaluation, validation, and verification (TEVV) needs are
+      identified early, appropriate to the system's risk and context.
+    concepts: [model_validation_testing, risk_assessment]
+
+  - id: nist-map-5.1
+    citation: "MAP 5.1"
+    title: "System impacts on individuals and groups are characterized"
+    summary: >
+      Likely impacts of the system on individuals, groups, communities, and
+      society are identified, including potential for unfair bias.
+    concepts: [bias_fairness, risk_assessment]
+
+  - id: nist-measure-2.3
+    citation: "MEASURE 2.3"
+    title: "System performance is evaluated under expected conditions"
+    summary: >
+      Performance metrics relevant to trustworthiness are measured under
+      conditions that reflect real-world deployment, not just a lab setting.
+    concepts: [model_validation_testing, monitoring_drift]
+
+  - id: nist-measure-2.8
+    citation: "MEASURE 2.8"
+    title: "Transparency and accountability are examined"
+    summary: >
+      Risks associated with a lack of transparency into how the system
+      works, and unclear accountability for its outcomes, are examined
+      and documented.
+    concepts: [transparency_explainability]
+
+  - id: nist-measure-2.9
+    citation: "MEASURE 2.9"
+    title: "Interpretability and explainability are measured"
+    summary: >
+      The AI model is explained, its outputs interpreted within the
+      deployment context, and this explainability is validated and
+      documented rather than assumed.
+    concepts: [transparency_explainability, model_validation_testing]
+
+  - id: nist-measure-2.11
+    citation: "MEASURE 2.11"
+    title: "Fairness and bias are evaluated"
+    summary: >
+      The system is evaluated for harmful bias and fairness issues, and
+      results are documented using appropriate metrics for the use case.
+    concepts: [bias_fairness, model_validation_testing]
+
+  - id: nist-measure-2.13
+    citation: "MEASURE 2.13"
+    title: "Effectiveness of human oversight is measured"
+    summary: >
+      Mechanisms intended to allow human oversight of the AI system are
+      themselves tested to confirm they work as intended.
+    concepts: [human_oversight, model_validation_testing]
+
+  - id: nist-manage-2.2
+    citation: "MANAGE 2.2"
+    title: "Mechanisms are in place to sustain the value of deployed systems"
+    summary: >
+      Procedures exist to regularly monitor a deployed system's performance
+      and to decommission or retrain it if it degrades or is misused.
+    concepts: [monitoring_drift, change_management]
+
+  - id: nist-manage-2.4
+    citation: "MANAGE 2.4"
+    title: "Mechanisms to deactivate systems that demonstrate harm exist"
+    summary: >
+      The organization can identify, respond to, and recover from AI system
+      errors and incidents, including the ability to shut a system down.
+    concepts: [incident_response, human_oversight]
+
+  - id: nist-manage-4.1
+    citation: "MANAGE 4.1"
+    title: "Post-deployment monitoring feeds back into risk management"
+    summary: >
+      Lessons learned from monitoring and incidents are captured and used
+      to improve the AI RMF process itself over time.
+    concepts: [incident_response, monitoring_drift, documentation_recordkeeping]

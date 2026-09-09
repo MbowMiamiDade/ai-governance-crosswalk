@@ -1,0 +1,142 @@
+# frameworks/cri_fs_ai_rmf.yaml
+#
+# Source: Cyber Risk Institute (CRI) Financial Services AI Risk Management
+# Framework ("FS AI RMF"), Risk and Control Matrix, Ver. 1.0 (02-09-2026).
+# Launched February 2026 by CRI in partnership with the U.S. Treasury and
+# 100+ financial institutions under the Financial Services Sector
+# Coordinating Council (FSSCC), aligned to the NIST AI RMF's four functions
+# (Govern/Map/Measure/Manage). Free to download at
+# https://cyberriskinstitute.org/the-profile/
+#
+# The full RCM contains 230 control objectives across 19 categories and 72
+# subcategories. The 12 entries below are a representative sample — one per
+# concept in this project's taxonomy — not the full matrix. Summaries are
+# original paraphrases written for this project, not the RCM's exact text;
+# citation IDs match the RCM's own numbering (e.g., "GV-2.3.3") so they can
+# be looked up directly in the source spreadsheet.
+
+framework:
+  id: cri_fs_ai_rmf
+  name: "CRI Financial Services AI Risk Management Framework (FS AI RMF)"
+  jurisdiction: "United States financial services sector (voluntary, industry-built)"
+  source_url: "https://cyberriskinstitute.org/the-profile/"
+
+obligations:
+  - id: cri-gv-2.3.3
+    citation: "FS AI RMF GV-2.3.3"
+    title: "AI governance structure"
+    summary: >
+      The organization establishes a governance body — often a cross-
+      functional committee with senior representation from business,
+      technology, risk, and legal — to oversee AI initiatives, evolving
+      toward a single accountable executive (e.g., a Chief Model Risk
+      Officer) aligned with existing model risk management functions.
+    concepts: [governance_accountability]
+
+  - id: cri-gv-1.3.1
+    citation: "FS AI RMF GV-1.3.1"
+    title: "AI-specific risk assessment methodology"
+    summary: >
+      The organization extends its enterprise risk management and model
+      risk management assessment methods to address AI-specific risks
+      throughout development, deployment, and operation, enabling
+      consistent evaluation of impact and likelihood across the AI
+      portfolio.
+    concepts: [risk_assessment]
+
+  - id: cri-gv-1.1.6
+    citation: "FS AI RMF GV-1.1.6"
+    title: "Data lifecycle and retention for AI"
+    summary: >
+      The organization integrates data retention, privacy, and legal
+      obligations into AI system lifecycle processes, tracking retention
+      periods and verifying that training data handling complies with
+      those policies as they change.
+    concepts: [data_quality_governance, documentation_recordkeeping]
+
+  - id: cri-gv-1.6.1
+    citation: "FS AI RMF GV-1.6.1"
+    title: "AI system inventory"
+    summary: >
+      The organization maintains a living inventory of its AI systems —
+      purpose, data sources, owners, risk rating, and dependencies —
+      updated as systems are built, acquired, or retired.
+    concepts: [documentation_recordkeeping, governance_accountability]
+
+  - id: cri-gv-6.1.4
+    citation: "FS AI RMF GV-6.1.4"
+    title: "Vendor due diligence for AI"
+    summary: >
+      The organization's third-party due diligence process is expanded to
+      address AI-specific concerns — data provenance, secondary data use,
+      and vendor data practices — and contracts are negotiated to protect
+      against data misuse and ensure data quality.
+    concepts: [vendor_third_party_risk]
+
+  - id: cri-gv-4.3.2
+    citation: "FS AI RMF GV-4.3.2"
+    title: "AI incident identification and resolution"
+    summary: >
+      AI incident identification and reporting is folded into the
+      organization's existing incident management framework, with clear
+      roles for prompt investigation and resolution to limit harm and
+      prevent recurrence.
+    concepts: [incident_response]
+
+  - id: cri-mp-3.5.1
+    citation: "FS AI RMF MP-3.5.1"
+    title: "Human oversight roles and responsibilities"
+    summary: >
+      The organization defines and documents who is responsible for human
+      oversight of a given AI system, based on the system's capabilities,
+      context of use, risks, and known limitations.
+    concepts: [human_oversight]
+
+  - id: cri-ms-2.9.1
+    citation: "FS AI RMF MS-2.9.1"
+    title: "Model explainability and validation"
+    summary: >
+      The organization documents how a model's design, training data, and
+      key features drive its outputs, and validation testing specifically
+      checks for stability, fairness, and performance limitations
+      alongside accuracy.
+    concepts: [transparency_explainability, model_validation_testing]
+
+  - id: cri-ms-2.5.1
+    citation: "FS AI RMF MS-2.5.1"
+    title: "Validation and reliability testing"
+    summary: >
+      A structured validation process tests the model against real-world
+      conditions — including distribution shifts, stress scenarios, and
+      adversarial inputs — with independent model validation involvement
+      and documented acceptance criteria.
+    concepts: [model_validation_testing]
+
+  - id: cri-ms-2.4.1
+    citation: "FS AI RMF MS-2.4.1"
+    title: "Monitoring and anomaly detection"
+    summary: >
+      The organization monitors deployed AI systems in production using
+      manual and automated tools, including statistical quality control
+      methods, to detect and alert on performance deviations or
+      anomalies.
+    concepts: [monitoring_drift]
+
+  - id: cri-ms-2.11.1
+    citation: "FS AI RMF MS-2.11.1"
+    title: "Fairness and bias evaluation"
+    summary: >
+      The organization evaluates AI systems for fairness and bias across
+      systemic, statistical, and human cognitive sources, and documents
+      mitigation strategies for any issues identified.
+    concepts: [bias_fairness]
+
+  - id: cri-mg-2.4.3
+    citation: "FS AI RMF MG-2.4.3"
+    title: "Controlled system shutdown mechanisms"
+    summary: >
+      The organization builds, tests, and maintains technical mechanisms —
+      fallback, rollback, and deactivation controls — for rapidly and
+      safely disengaging an AI system that is underperforming, including
+      coordinated plans for disconnecting third-party AI services.
+    concepts: [change_management, human_oversight]
