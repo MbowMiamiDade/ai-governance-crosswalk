@@ -153,7 +153,7 @@ EU AI Act) alongside it rather than relying on model risk guidance alone.
 ## Roadmap / possible extensions
 
 - Streamlit front-end for non-technical browsing
-- Replace CRI FS AI RMF placeholders with the real Risk and Control Matrix
+- Expand the CRI FS AI RMF sample beyond the current 12 control objectives
 - GitHub Actions CI to run `pytest` on every push (data-integrity checks
   catch broken concept references automatically)
 - Add a "gap analysis" mode: given two frameworks, show concepts where one
